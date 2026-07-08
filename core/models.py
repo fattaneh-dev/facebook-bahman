@@ -1,5 +1,3 @@
-from tabnanny import verbose
-
 from django.db import models
 
 
@@ -33,3 +31,5 @@ class Post(models.Model):
     last_upate = models.DateTimeField(auto_now=True)
 
 
+    def __str__(self):
+        return self.title
