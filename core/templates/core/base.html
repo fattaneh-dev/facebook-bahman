@@ -15,7 +15,13 @@
 </head>
 <body dir="rtl">
     <div class="container">
-        
+        {% for message in messages %}
+
+
+        <div class="alert alert-success text-center">
+            {{ message }}
+        </div> 
+            {% endfor %}
         {% block main %}
 
         {% endblock %}

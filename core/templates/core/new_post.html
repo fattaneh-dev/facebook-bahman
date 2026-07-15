@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+
+پست جدید
+
+{% endblock %}
+
+
+{% block main %}
+
+<form action="{% url 'new_post' %}" method="post">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+
+    <input type="submit" value="ایجاد پست" class="btn btn-primary">
+</form>
+
+{% endblock %}
